@@ -143,8 +143,15 @@ $(call inherit-product, vendor/evolution/config/pixel.mk)
 
 # Inherit from GMS product config
 ifeq ($(WITH_GAPPS),true)
-$(call inherit-product, vendor/gms/gms_full.mk)
+$(call inherit-product, vendor/gapps/gapps.mk)
 endif
+
+# Face Unlock
+PRODUCT_PACKAGES += \
+    FaceUnlockService
+TARGET_FACE_UNLOCK_SUPPORTED := true
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
+    ro.face.moto_unlock_service=$(TARGET_FACE_UNLOCK_SUPPORTED)
 
 # Pixel Style
 include vendor/pixelstyle/config.mk
@@ -152,11 +159,11 @@ include vendor/pixelstyle/config.mk
 # Non-Evo packages
 PRODUCT_PACKAGES += \
     EvolutionThemesStub \
-    Seedvault \
     ThemePicker \
     Terminal \
-    TouchGestures
-
+    TouchGestures \
+    ThemePicker
+    
 # Custom Overlays
 # Settings
 PRODUCT_PACKAGES += \
