@@ -177,8 +177,8 @@ PRODUCT_PACKAGES += \
     SystemUIChocoXOverlay \
     SystemDarkAubergineOverlay \
     SystemUIDarkAubergineOverlay \
-    SystemXtendedClearOverlay \
-    SystemUIXtendedClearOverlay
+    SystemClearSpringOverlay \
+    SystemUIClearSpringOverlay
 
 # Navbar
 PRODUCT_PACKAGES += \
