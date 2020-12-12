@@ -151,6 +151,9 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
 # Inherit from rro_overlays config
 $(call inherit-product, vendor/evolution/config/rro_overlays.mk)
 
+# Inherit from textclassifier config
+$(call inherit-product, vendor/evolution/config/textclassifier.mk)
+
 # Pixel Style
 include vendor/pixelstyle/config.mk
 
