@@ -15,4 +15,5 @@
 # Packages/Overlays
 PRODUCT_PACKAGES += \
     CellBroadcastServiceOverlay \
+    EvolutionXConfigOverlay \
     SettingsGoogleOverlayEvolutionX
